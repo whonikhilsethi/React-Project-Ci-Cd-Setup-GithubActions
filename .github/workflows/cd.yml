@@ -11,8 +11,8 @@ on:
 
 jobs:
   Deployment:
-  runs-on: ubuntu-latest
-  environment: Production
+    runs-on: ubuntu-latest
+    environment: Production
 
   steps:
   - name: "Setting up Node js"

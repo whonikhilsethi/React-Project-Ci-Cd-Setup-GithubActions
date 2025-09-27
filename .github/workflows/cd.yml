@@ -29,8 +29,8 @@ jobs:
       uses: actions/download-artifact@v5
       with:
         name: build
-      github-token: ${{ github.token }}
-      run-id: ${{ github.event.workflow_run.id }}
+        github-token: ${{ github.token }}
+        run-id: ${{ github.event.workflow_run.id }}
 
 
     - name: "Deploy to Vercel"

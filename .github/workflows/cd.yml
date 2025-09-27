@@ -22,7 +22,7 @@ jobs:
 
 
       - name: "Installing Vercel CLI"
-        run: npm i -g Vercel
+        run: npm i -g vercel
 
   
       - name: "Downloading Artifact"

@@ -28,7 +28,7 @@ jobs:
     - name: "Downloading Artifact"
       uses: actions/download-artifact@v5
       with:
-        name: build
+        name: 'Build'
         github-token: ${{ github.token }}
         run-id: ${{ github.event.workflow_run.id }}
 

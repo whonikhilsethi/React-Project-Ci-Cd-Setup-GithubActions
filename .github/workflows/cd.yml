@@ -14,26 +14,26 @@ jobs:
     runs-on: ubuntu-latest
     
 
-  steps:
-    - name: "Setting up Node js"
-      uses: actions/setup-node@v5
-      with:
-        node-version: '22'
+    steps:
+      - name: "Setting up Node js"
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
 
 
-    - name: "Installing Vercel CLI"
-      run: npm install -g Vercel
+      - name: "Installing Vercel CLI"
+        run: npm install -g Vercel
 
   
-    #- name: "Downloading Artifact"
-     # uses: actions/download-artifact@v5
-      #with:
-      #  name: 'Build'
-        #github-token: ${{ github.token }}
-       # run-id: ${{ github.event.workflow_run.id }}
+      - name: "Downloading Artifact"
+        uses: actions/download-artifact@v5
+        with:
+          name: 'Build'
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
 
 
-   ## - name: "Deploy to Vercel"
-     # run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --name=cicdproduction
+      - name: "Deploy to Vercel"
+        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --name=cicdproduction
 
     
